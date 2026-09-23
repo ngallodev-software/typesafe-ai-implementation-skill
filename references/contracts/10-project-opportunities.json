@@ -1,8 +1,8 @@
 {
   "classification": [
     "PROJECT-SPECIFIC",
-    "INTERNAL-DERIVED",
-    "INTERNAL-RECOMMENDATION"
+    "PROJECT-DERIVED",
+    "PROJECT-GUIDANCE"
   ],
   "agent_workflow": {
     "preserve_deterministic_authority": [
