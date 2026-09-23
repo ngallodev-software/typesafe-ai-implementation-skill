@@ -380,3 +380,24 @@ it complete, verify that:
 - offline tests do not require an API key;
 - semantic eval cases exist for the behavior being automated;
 - rollout level matches measured evidence.
+
+## Related implementations and sources
+
+This skill provides the design workflow; these repositories show specific consumer
+boundaries. Use them as implementation examples, not as replacements for the
+target repository's current contracts:
+
+- [Agent-Workflow's built-in TypeSafe routing integration](https://github.com/ngallodev-software/agent-workflow#optional-bounded-semantic-decisions)
+- [Standalone Agent-Workflow TypeSafe adapter](https://github.com/ngallodev-software/agent-workflow-typesafe-ai)
+- [Benchmark qualification, advisory review, and post-seal scoring](https://github.com/ngallodev-software/agent-workflow-benchmark)
+- [Neutral comparative-evaluation contracts](https://github.com/ngallodev-software/agent-workflow-comparative-eval)
+- [Published BM3, BM4, and BM5 evidence](https://github.com/ngallodev-software/agent-workflow-benchmark-results)
+
+For vendor behavior, consult the [TypeSafe documentation](https://docs.typesafe.ai/llms.txt),
+[System One](https://docs.typesafe.ai/concepts/system-one.md), the
+[typed primitives](https://docs.typesafe.ai/primitives.md), and the
+[Python SDK](https://docs.typesafe.ai/sdk/python.md). Jev/System One is described in
+the [TypeSafe announcement](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+The links and cross-project notes are also collected in this repository's
+[README](README.md#where-the-ideas-are-applied); project-specific references remain
+subject to the provenance warning in `INTERNAL.md`.
