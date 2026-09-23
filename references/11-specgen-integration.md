@@ -1,8 +1,8 @@
 # SpecGen integration opportunities
 
-**Classification:** PROJECT-SPECIFIC / INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PROJECT-SPECIFIC / PROJECT-DERIVED / PROJECT-GUIDANCE
 
-These notes derive from the internal review of `ngallodev-software/specgen-aw` and must
+These notes derive from the project review of `ngallodev-software/specgen-aw` and must
 be revalidated against the current repository before implementation.
 
 SpecGen's canonical JSON, append-only decisions, deterministic validation, repository
