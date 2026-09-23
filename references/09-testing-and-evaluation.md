@@ -1,6 +1,6 @@
 # Testing and evaluation
 
-**Classification:** INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PROJECT-DERIVED / PROJECT-GUIDANCE
 
 ## Deterministic unit tests — no API key
 
