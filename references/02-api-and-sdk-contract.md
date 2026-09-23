@@ -6,7 +6,7 @@
 Re-check the live documentation before implementation because model identifiers, limits,
 SDK behavior, pricing, and request details can change.
 
-Snapshot used by this internal skill:
+Snapshot used by this implementation skill:
 
 - hosted base URL: `https://api.typesafe.ai`;
 - System One endpoint: `POST /v1/systemone`;
