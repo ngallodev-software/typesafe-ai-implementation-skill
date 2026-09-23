@@ -1,15 +1,21 @@
 # TypeSafe AI Implementation Skill
 
 > A practical engineering playbook for using Jev / System One typed judgments at
-> bounded semantic decision points—while keeping application authority in code.
+> bounded semantic decision points while keeping application authority in code.
+
+![Skill](https://img.shields.io/badge/skill-0.1.0-blue)
+![Status](https://img.shields.io/badge/status-experimental-orange)
+![License](https://img.shields.io/badge/license-Apache--2.0-green)
 
 **Start here:** [`SKILL.md`](SKILL.md) · [Design references](references/) ·
-[Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
+[Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
 
-> **Provenance:** This repository contains mixed-source and internal-derived
-> material. [`INTERNAL.md`](INTERNAL.md) describes the current publication status
-> and source labels. A public GitHub repository does not mean every included
-> recommendation or project note has been source-cleared for redistribution.
+This is an independent implementation guide maintained by **ngallodev-software**.
+It is not an official TypeSafe AI skill, product, or endorsement. The repository
+combines public TypeSafe documentation and SDK behavior with independently authored
+engineering guidance and project-specific analysis of public ngallodev-software
+repositories. Third-party attribution is recorded in
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## The approach
 
@@ -97,6 +103,6 @@ TypeSafe AI.
 - [Python SDK](https://docs.typesafe.ai/sdk/python.md) · [official Python SDK source](https://github.com/typesafe-ai/typesafe-sdk-python) · [TypeSafe skills](https://github.com/typesafe-ai/skills)
 
 The integration patterns and project analysis in this repository are maintained
-by **ngallodev-software**. Vendor facts are linked to TypeSafe sources; internal
-recommendations and project-specific material remain marked in the references
-until separately reviewed for public release.
+by **ngallodev-software**. Vendor facts are linked to TypeSafe sources; original
+project guidance and project-specific analysis are labeled separately from vendor
+contracts so readers can distinguish sourced behavior from engineering judgment.
