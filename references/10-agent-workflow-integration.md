@@ -1,8 +1,8 @@
 # Agent-Workflow integration opportunities
 
-**Classification:** PROJECT-SPECIFIC / INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PROJECT-SPECIFIC / PROJECT-DERIVED / PROJECT-GUIDANCE
 
-These notes derive from the internal review of `ngallodev-software/agent-workflow` and
+These notes derive from the project review of `ngallodev-software/agent-workflow` and
 must be revalidated against the current repository before implementation.
 
 ## Preserve these authority boundaries
