@@ -1,6 +1,6 @@
 # Confidence, calibration, and rollout
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-GUIDANCE
 
 ## Confidence is not authority
 
