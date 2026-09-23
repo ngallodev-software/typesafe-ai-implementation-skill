@@ -1,6 +1,6 @@
 # Programming model
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-GUIDANCE
 
 TypeSafe System One should be treated as a typed semantic decision layer. The
 application supplies state and bounded questions; the application continues to own
