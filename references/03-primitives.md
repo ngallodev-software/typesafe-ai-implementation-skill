@@ -1,6 +1,6 @@
 # Choice, Noul, and Score
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-GUIDANCE
 
 ## Choice
 
