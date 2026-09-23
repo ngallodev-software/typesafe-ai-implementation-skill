@@ -1,6 +1,6 @@
 # State and question design
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-GUIDANCE
 
 ## State is evidence
 
