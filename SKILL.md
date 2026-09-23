@@ -165,7 +165,7 @@ Do not hide several independently useful dimensions in one question. Batch indep
 questions over the same state. If a question depends on an earlier answer because that
 answer changes evidence or candidates, make a second request.
 
-Question instructions must be self-contained; do not rely on the internal question key
+Question instructions must be self-contained; do not rely on the machine question key
 for semantics. Include `none` / `other` / `no_match` when a Choice candidate set may be
 incomplete.
 
@@ -400,4 +400,4 @@ For vendor behavior, consult the [TypeSafe documentation](https://docs.typesafe.
 the [TypeSafe announcement](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
 The links and cross-project notes are also collected in this repository's
 [README](README.md#where-the-ideas-are-applied); project-specific references remain
-subject to the provenance warning in `INTERNAL.md`.
+subject to the provenance guidance in `PROVENANCE.md`.
