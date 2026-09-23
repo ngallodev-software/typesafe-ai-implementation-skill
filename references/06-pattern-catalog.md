@@ -1,6 +1,6 @@
 # Implementation pattern catalog
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-DERIVED / PROJECT-GUIDANCE
 
 ## Semantic router
 
