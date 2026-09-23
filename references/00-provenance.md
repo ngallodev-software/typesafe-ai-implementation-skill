@@ -1,9 +1,9 @@
 # Provenance model
 
-**Classification:** INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PROJECT-DERIVED / PROJECT-GUIDANCE
 
-This skill separates factual vendor contracts from our engineering guidance so later
-public extraction is mechanical rather than editorial guesswork.
+This skill separates factual vendor contracts from independently authored engineering
+guidance so source boundaries remain explicit and reviewable.
 
 ## Tags
 
@@ -11,9 +11,9 @@ public extraction is mechanical rather than editorial guesswork.
 |---|---|---|
 | `PUBLIC-SOURCE` | Directly traceable to public TypeSafe docs/SDK/source | Yes, subject to license/quotation limits |
 | `PUBLIC-DERIVED` | Our restatement of public behavior | Usually |
-| `INTERNAL-DERIVED` | Analysis produced in this work | Review first |
-| `INTERNAL-RECOMMENDATION` | Our integration architecture or operational advice | Yes if independently authored and appropriate |
-| `PROJECT-SPECIFIC` | Agent-Workflow / SpecGen observations or recommendations | Only if repository/source context is public and intentionally disclosed |
+| `PROJECT-DERIVED` | Original analysis produced for this repository | Yes; distinguish it from vendor claims |
+| `PROJECT-GUIDANCE` | Original integration architecture or operational advice | Yes; engineering judgment, not vendor contract |
+| `PROJECT-SPECIFIC` | Agent-Workflow / SpecGen observations or recommendations | Yes when based on intentionally public project context |
 
 ## Source hierarchy
 
