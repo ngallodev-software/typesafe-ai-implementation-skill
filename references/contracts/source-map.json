@@ -1,10 +1,10 @@
 {
-  "schema": "typesafe-impl-internal/source-map/v1",
-  "visibility": "internal",
+  "schema": "typesafe-ai-implementation/source-map/v1",
+  "visibility": "public",
   "files": {
     "SKILL.md": [
       "PUBLIC-DERIVED",
-      "INTERNAL-RECOMMENDATION"
+      "PROJECT-GUIDANCE"
     ],
     "references/02-api-and-sdk-contract.md": [
       "PUBLIC-SOURCE",
@@ -12,25 +12,25 @@
     ],
     "references/03-primitives.md": [
       "PUBLIC-DERIVED",
-      "INTERNAL-RECOMMENDATION"
+      "PROJECT-GUIDANCE"
     ],
     "references/05-harness-architecture.md": [
-      "INTERNAL-DERIVED",
-      "INTERNAL-RECOMMENDATION"
+      "PROJECT-DERIVED",
+      "PROJECT-GUIDANCE"
     ],
     "references/10-agent-workflow-integration.md": [
       "PROJECT-SPECIFIC",
-      "INTERNAL-DERIVED",
-      "INTERNAL-RECOMMENDATION"
+      "PROJECT-DERIVED",
+      "PROJECT-GUIDANCE"
     ],
     "references/11-specgen-integration.md": [
       "PROJECT-SPECIFIC",
-      "INTERNAL-DERIVED",
-      "INTERNAL-RECOMMENDATION"
+      "PROJECT-DERIVED",
+      "PROJECT-GUIDANCE"
     ],
     "references/12-public-source-index.md": [
       "PUBLIC-SOURCE"
     ]
   },
-  "public_extraction_rule": "Do not infer that INTERNAL-DERIVED content is nonpublic fact; re-source or rewrite it before public release."
+  "public_extraction_rule": "Keep vendor-sourced behavior, project-derived analysis, and project-specific guidance explicitly labeled so readers can distinguish contracts from engineering judgment."
 }
