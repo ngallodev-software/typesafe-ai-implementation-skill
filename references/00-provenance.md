@@ -23,6 +23,6 @@ For implementation-time facts, prefer in this order:
 2. currently installed/selected official SDK reference and types;
 3. official public SDK repository;
 4. public TypeSafe examples/cookbooks;
-5. this internal snapshot.
+5. this repository snapshot.
 
 Version-dependent details in this skill are snapshots, not permanent guarantees.
