@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "semantic-assessment.schema.json",
+  "title": "Semantic Assessment",
+  "type": "object",
+  "required": [
+    "schema",
+    "subject_ref",
+    "decision_receipts",
+    "advisory_only"
+  ],
+  "properties": {
+    "schema": {
+      "const": "semantic-assessment/v1alpha1"
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_digest": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decision_receipts": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "advisory_only": {
+      "type": "boolean",
+      "const": true
+    }
+  },
+  "additionalProperties": true
+}

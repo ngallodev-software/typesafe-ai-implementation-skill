@@ -1,0 +1,28 @@
+{
+  "anti_patterns": [
+    "use Jev to generate text/code/specifications",
+    "replace deterministic schema/permission/arithmetic/filesystem checks",
+    "let semantic output directly mutate state without policy validation",
+    "hard-code uncalibrated production thresholds",
+    "use one omnibus question for multiple dimensions",
+    "omit no-match from incomplete candidate sets",
+    "treat confidence as correctness or authorization",
+    "store raw sensitive state unnecessarily"
+  ],
+  "implementation_checklist": [
+    "identify semantic decisions currently handled by brittle heuristics or expensive generative calls",
+    "exclude exact deterministic decisions",
+    "define state projection/provenance",
+    "decompose into narrow primitives",
+    "add no-match where needed",
+    "batch independent questions",
+    "implement a single adapter",
+    "keep authority in existing code",
+    "define explicit fallbacks",
+    "shadow against current behavior",
+    "calibrate thresholds",
+    "version questions/state/policy",
+    "add observability",
+    "promote guarded automation only from measured evidence"
+  ]
+}

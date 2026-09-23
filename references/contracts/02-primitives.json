@@ -1,0 +1,57 @@
+{
+  "noul": {
+    "use_when": "one binary semantic proposition",
+    "request": {
+      "type": "noul",
+      "instructions": "self-contained proposition/question",
+      "criteria": "optional true/false descriptions"
+    },
+    "response": {
+      "noul": "P(yes) in [0,1]"
+    },
+    "rules": [
+      "do not add a second model-confidence concept",
+      "near 0.5 means uncertain binary judgment, not medium intensity",
+      "use one Noul per label for independent multi-label classification"
+    ]
+  },
+  "choice": {
+    "use_when": "exactly one answer must be selected from a known finite candidate set",
+    "request": {
+      "type": "choice",
+      "instructions": "self-contained selection question",
+      "criteria": "mapping candidate_id -> optional description"
+    },
+    "response": {
+      "choice": "selected candidate id",
+      "confidence": "distribution concentration metric",
+      "probabilities": "candidate -> probability"
+    },
+    "known_max_cardinality": 255,
+    "rules": [
+      "include other/none/no_match when candidates may be incomplete",
+      "never use to invent arbitrary identifiers",
+      "revalidate selected candidate locally before action",
+      "confidence does not grant authority"
+    ]
+  },
+  "score": {
+    "use_when": "ordered degree/intensity judgment",
+    "request": {
+      "type": "score",
+      "instructions": "self-contained dimension",
+      "criteria": "ordered sequence of descriptive levels"
+    },
+    "response": {
+      "score": "expected numeric position over ordered levels",
+      "confidence": "distribution concentration metric",
+      "legend": "level -> description",
+      "probabilities": "level -> probability"
+    },
+    "rules": [
+      "criteria must be ordered and behaviorally distinct",
+      "split independent dimensions into separate Scores",
+      "for ranking score candidates consistently then sort in code"
+    ]
+  }
+}

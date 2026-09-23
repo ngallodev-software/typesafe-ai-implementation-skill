@@ -1,0 +1,390 @@
+{
+  "schema": "typesafe-ai/implementation-blueprint/v1",
+  "generated_at": "2026-09-17",
+  "purpose": "Machine-optimized implementation contract for integrating TypeSafe AI Jev as a bounded semantic-decision layer.",
+  "design_invariant": "Application code owns workflow authority, policy, side effects, persistence, authorization, deterministic validation, thresholds, and escalation. TypeSafe supplies narrow typed semantic judgments only.",
+  "sources": {
+    "attached_skill": "typesafe-ai SKILL.md supplied by user",
+    "docs_index": "https://docs.typesafe.ai/llms.txt",
+    "official_python_sdk": "https://github.com/typesafe-ai/typesafe-sdk-python",
+    "official_javascript_sdk": "https://github.com/typesafe-ai/typesafe-sdk-js",
+    "official_launch_post": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
+    "access_note": "Direct docs.typesafe.ai page retrieval was unavailable in this session; API/SDK details were cross-verified against current official SDK source. Re-check live docs before future implementation."
+  },
+  "api": {
+    "base_url": "https://api.typesafe.ai",
+    "system_one_path": "/v1/systemone",
+    "models_path": "/v1/models",
+    "auth": {
+      "scheme": "Bearer",
+      "environment_variable": "TYPESAFE_API_KEY",
+      "header": "Authorization"
+    },
+    "default_model": "jev-latest",
+    "python": {
+      "package": "typesafe-sdk",
+      "primary_client": "TypeSafeClient",
+      "question_types": [
+        "Choice",
+        "Noul",
+        "Score"
+      ],
+      "environment_variables": [
+        "TYPESAFE_API_KEY",
+        "TYPESAFE_BASE_URL",
+        "TYPESAFE_DEFAULT_MODEL",
+        "TYPESAFE_LOG_LEVEL"
+      ],
+      "default_request_timeout_seconds": 10.0,
+      "retry_policy": {
+        "max_retries_after_initial": 2,
+        "retry_http_statuses": "408, 429, 500-599",
+        "retry_connection_errors": true,
+        "retry_timeout_errors": true,
+        "respect_retry_after": true,
+        "backoff_initial_seconds": 0.5,
+        "backoff_max_seconds": 5.0,
+        "backoff_jitter_fraction": 0.25,
+        "default_total_retry_budget_seconds": 30.0
+      }
+    },
+    "javascript": {
+      "package": "@typesafe-ai/sdk",
+      "primary_client": "TypeSafeClient",
+      "response_answer_container": "answers"
+    },
+    "request_shape": {
+      "required": [
+        "state",
+        "questions"
+      ],
+      "optional": [
+        "model"
+      ],
+      "state": "JSON-compatible structured or unstructured application state",
+      "questions": "mapping from application question keys to typed question definitions"
+    }
+  },
+  "primitives": {
+    "noul": {
+      "use_when": "one binary semantic proposition",
+      "request": {
+        "type": "noul",
+        "instructions": "self-contained proposition/question",
+        "criteria": "optional true/false descriptions"
+      },
+      "response": {
+        "noul": "P(yes) in [0,1]"
+      },
+      "rules": [
+        "do not add a second model-confidence concept",
+        "near 0.5 means uncertain binary judgment, not medium intensity",
+        "use one Noul per label for independent multi-label classification"
+      ]
+    },
+    "choice": {
+      "use_when": "exactly one answer must be selected from a known finite candidate set",
+      "request": {
+        "type": "choice",
+        "instructions": "self-contained selection question",
+        "criteria": "mapping candidate_id -> optional description"
+      },
+      "response": {
+        "choice": "selected candidate id",
+        "confidence": "distribution concentration metric",
+        "probabilities": "candidate -> probability"
+      },
+      "known_max_cardinality": 255,
+      "rules": [
+        "include other/none/no_match when candidates may be incomplete",
+        "never use to invent arbitrary identifiers",
+        "revalidate selected candidate locally before action",
+        "confidence does not grant authority"
+      ]
+    },
+    "score": {
+      "use_when": "ordered degree/intensity judgment",
+      "request": {
+        "type": "score",
+        "instructions": "self-contained dimension",
+        "criteria": "ordered sequence of descriptive levels"
+      },
+      "response": {
+        "score": "expected numeric position over ordered levels",
+        "confidence": "distribution concentration metric",
+        "legend": "level -> description",
+        "probabilities": "level -> probability"
+      },
+      "rules": [
+        "criteria must be ordered and behaviorally distinct",
+        "split independent dimensions into separate Scores",
+        "for ranking score candidates consistently then sort in code"
+      ]
+    }
+  },
+  "question_design": {
+    "required_properties": [
+      "narrow",
+      "semantically coherent",
+      "answerable from supplied state",
+      "self-contained instructions",
+      "explicit output space"
+    ],
+    "avoid": [
+      "free-form generation",
+      "research",
+      "long dependent reasoning chains",
+      "multi-dimensional omnibus questions",
+      "hidden meaning only in question id"
+    ],
+    "batching": {
+      "rule": "Batch independent questions that share state in one System One request.",
+      "speculative_branches": "Allowed when each question states its premise explicitly and application code ignores unused branch answers."
+    }
+  },
+  "state_design": {
+    "preferred_form": "named JSON object fields preserving identity, relationships, policy, and provenance",
+    "requirements": [
+      "include all judgment-relevant evidence",
+      "carry stable source/candidate IDs",
+      "make authorization/policy facts explicit",
+      "redact irrelevant secrets",
+      "canonicalize for hashing/caching",
+      "bound payloads in application code"
+    ]
+  },
+  "reference_feature": {
+    "name": "semantic_decision_layer",
+    "components": [
+      {
+        "name": "StateProjector",
+        "responsibility": "select, normalize, redact, and provenance-tag model state"
+      },
+      {
+        "name": "QuestionSetRegistry",
+        "responsibility": "versioned Choice/Noul/Score definitions"
+      },
+      {
+        "name": "TypeSafeDecisionClient",
+        "responsibility": "official SDK call, retries, response normalization; no business thresholds"
+      },
+      {
+        "name": "DecisionPolicy",
+        "responsibility": "versioned thresholds, composition, fallback, escalation"
+      },
+      {
+        "name": "DecisionReceiptStore",
+        "responsibility": "optional auditable request hash, model answers, policy outcome, provenance; no API key"
+      },
+      {
+        "name": "SemanticEvalHarness",
+        "responsibility": "shadow comparison, calibration, accuracy, consequence and stability measurements"
+      }
+    ],
+    "request_contract": {
+      "decision_set": "stable/versioned semantic decision family",
+      "state": "projected state",
+      "questions": "typed questions",
+      "model": "jev-latest by default",
+      "policy_version": "application-owned policy version"
+    },
+    "receipt_contract": {
+      "schema": "semantic-decision-receipt/v1",
+      "fields": [
+        "decision_set",
+        "request_sha256",
+        "model",
+        "question_schema_version",
+        "policy_version",
+        "answers",
+        "policy_outcome",
+        "fallback_used",
+        "source_refs",
+        "usage_optional"
+      ]
+    }
+  },
+  "feature_patterns": [
+    {
+      "id": "semantic_router",
+      "primitive": "choice",
+      "inputs": [
+        "request",
+        "allowed_candidates",
+        "policy_summary"
+      ],
+      "output": "candidate id plus distribution",
+      "authority_rule": "selected id must still pass deterministic allowlist/permission/model-policy checks",
+      "fallback": "existing deterministic route or reasoning/human escalation"
+    },
+    {
+      "id": "ambiguity_gate",
+      "primitive": "noul",
+      "questions": [
+        "Does this input have multiple plausible behavioral interpretations?",
+        "Does resolution require a product/policy/user decision absent from state?"
+      ],
+      "output": "probabilities used to decide ask-user/escalation policy"
+    },
+    {
+      "id": "evidence_reranker",
+      "primitive": "score_or_noul_per_candidate",
+      "pipeline": [
+        "broad deterministic/lexical retrieval",
+        "parallel semantic relevance judgments",
+        "code selects top-K",
+        "reasoning model/human reads narrowed evidence"
+      ],
+      "rule": "TypeSafe narrows context; it does not substitute for source evidence."
+    },
+    {
+      "id": "claim_evidence_verifier",
+      "primitive": "noul",
+      "state": [
+        "claim",
+        "candidate evidence",
+        "provenance",
+        "applicable policy"
+      ],
+      "rule": "use exact deterministic checks instead when exact verification is possible"
+    },
+    {
+      "id": "quality_dimensions",
+      "primitive": "multiple_score",
+      "dimensions_example": [
+        "specificity",
+        "testability",
+        "evidence support",
+        "scope clarity",
+        "compatibility coverage"
+      ],
+      "rule": "compose dimensions in application code with explicit formula/policy"
+    },
+    {
+      "id": "hierarchical_classifier",
+      "primitive": "choice_then_choice",
+      "rule": "coarse category first, then branch-specific Choice; useful for large taxonomies/high-cardinality sets"
+    },
+    {
+      "id": "system_one_system_two_cascade",
+      "primitive": "mixed",
+      "rule": "Jev handles narrow fast judgments; low-confidence/high-consequence/complex cases escalate to a reasoning model or human; preserve separate receipts"
+    }
+  ],
+  "failure_semantics": {
+    "invalid_local_input": "fail before API call",
+    "transport_or_service_failure": "apply explicit fallback; never silently treat as positive/approved",
+    "semantic_uncertainty": "successful call with diffuse/borderline probabilities; escalate by policy; do not retry identical request merely to seek another answer",
+    "authority_bearing_default": "fail closed or fall back to existing authority path"
+  },
+  "security": {
+    "requirements": [
+      "API key server-side only",
+      "do not put key in state/logs/receipts/fixtures/client bundles",
+      "minimize sent state",
+      "apply organization data-handling policy",
+      "revalidate model-selected identifiers locally",
+      "type safety is not authorization or truth"
+    ]
+  },
+  "calibration_and_rollout": {
+    "phases": [
+      "shadow",
+      "advisory",
+      "guarded_automation",
+      "evidence_based_expansion"
+    ],
+    "metrics": [
+      "accuracy/confusion matrix",
+      "precision/recall by Noul threshold",
+      "calibration/reliability",
+      "escalation rate",
+      "false-accept cost",
+      "false-reject cost",
+      "latency",
+      "request cost",
+      "disagreement with current behavior",
+      "paraphrase/state-format stability"
+    ],
+    "version_on_change": [
+      "question instructions",
+      "criteria",
+      "state projection",
+      "model id",
+      "threshold policy",
+      "composition formula"
+    ]
+  },
+  "tests": {
+    "unit": [
+      "state projection/redaction",
+      "candidate construction",
+      "canonical request hashing",
+      "response normalization",
+      "policy composition",
+      "fallbacks",
+      "no-match handling",
+      "post-selection authority validation"
+    ],
+    "live_contract": [
+      "Noul request",
+      "Choice request",
+      "Score request",
+      "mixed batched request",
+      "auth failure",
+      "retry/timeout path",
+      "model selection",
+      "response parsing"
+    ],
+    "semantic_eval": [
+      "representative labeled/adjudicated cases",
+      "application-level outcome tests",
+      "calibration",
+      "high-confidence wrong cases",
+      "low-confidence correct cases",
+      "contradictory/missing evidence",
+      "prompt-like untrusted text in state",
+      "stale policy",
+      "no-valid-candidate cases"
+    ]
+  },
+  "anti_patterns": [
+    "use Jev to generate text/code/specifications",
+    "replace deterministic schema/permission/arithmetic/filesystem checks",
+    "let semantic output directly mutate state without policy validation",
+    "hard-code uncalibrated production thresholds",
+    "use one omnibus question for multiple dimensions",
+    "omit no-match from incomplete candidate sets",
+    "treat confidence as correctness or authorization",
+    "store raw sensitive state unnecessarily"
+  ],
+  "implementation_checklist": [
+    "identify semantic decisions currently handled by brittle heuristics or expensive generative calls",
+    "exclude exact deterministic decisions",
+    "define state projection/provenance",
+    "decompose into narrow primitives",
+    "add no-match where needed",
+    "batch independent questions",
+    "implement a single adapter",
+    "keep authority in existing code",
+    "define explicit fallbacks",
+    "shadow against current behavior",
+    "calibrate thresholds",
+    "version questions/state/policy",
+    "add observability",
+    "promote guarded automation only from measured evidence"
+  ],
+  "vendor_claims_snapshot_2026_09_14": {
+    "pricing_input_usd_per_million_tokens": 0.042,
+    "output_charge": "vendor states free/too cheap to meter",
+    "reported_latency_ms": "70-500 in vendor environment",
+    "status": "early access",
+    "architecture_notes": [
+      "new architecture",
+      "parallel sampler",
+      "RLCD"
+    ],
+    "do_not_hardcode": true,
+    "caveat": "Vendor-published figures and benchmarks; monitor and independently evaluate for the target workload."
+  }
+}

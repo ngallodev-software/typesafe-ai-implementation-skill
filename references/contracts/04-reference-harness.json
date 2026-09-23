@@ -1,0 +1,51 @@
+{
+  "name": "semantic_decision_layer",
+  "components": [
+    {
+      "name": "StateProjector",
+      "responsibility": "select, normalize, redact, and provenance-tag model state"
+    },
+    {
+      "name": "QuestionSetRegistry",
+      "responsibility": "versioned Choice/Noul/Score definitions"
+    },
+    {
+      "name": "TypeSafeDecisionClient",
+      "responsibility": "official SDK call, retries, response normalization; no business thresholds"
+    },
+    {
+      "name": "DecisionPolicy",
+      "responsibility": "versioned thresholds, composition, fallback, escalation"
+    },
+    {
+      "name": "DecisionReceiptStore",
+      "responsibility": "optional auditable request hash, model answers, policy outcome, provenance; no API key"
+    },
+    {
+      "name": "SemanticEvalHarness",
+      "responsibility": "shadow comparison, calibration, accuracy, consequence and stability measurements"
+    }
+  ],
+  "request_contract": {
+    "decision_set": "stable/versioned semantic decision family",
+    "state": "projected state",
+    "questions": "typed questions",
+    "model": "jev-latest by default",
+    "policy_version": "application-owned policy version"
+  },
+  "receipt_contract": {
+    "schema": "semantic-decision-receipt/v1",
+    "fields": [
+      "decision_set",
+      "request_sha256",
+      "model",
+      "question_schema_version",
+      "policy_version",
+      "answers",
+      "policy_outcome",
+      "fallback_used",
+      "source_refs",
+      "usage_optional"
+    ]
+  }
+}

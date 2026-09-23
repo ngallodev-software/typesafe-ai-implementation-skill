@@ -1,0 +1,33 @@
+{
+  "question_design": {
+    "required_properties": [
+      "narrow",
+      "semantically coherent",
+      "answerable from supplied state",
+      "self-contained instructions",
+      "explicit output space"
+    ],
+    "avoid": [
+      "free-form generation",
+      "research",
+      "long dependent reasoning chains",
+      "multi-dimensional omnibus questions",
+      "hidden meaning only in question id"
+    ],
+    "batching": {
+      "rule": "Batch independent questions that share state in one System One request.",
+      "speculative_branches": "Allowed when each question states its premise explicitly and application code ignores unused branch answers."
+    }
+  },
+  "state_design": {
+    "preferred_form": "named JSON object fields preserving identity, relationships, policy, and provenance",
+    "requirements": [
+      "include all judgment-relevant evidence",
+      "carry stable source/candidate IDs",
+      "make authorization/policy facts explicit",
+      "redact irrelevant secrets",
+      "canonicalize for hashing/caching",
+      "bound payloads in application code"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "semantic-decision-receipt.schema.json",
+  "title": "Semantic Decision Receipt",
+  "type": "object",
+  "required": [
+    "schema",
+    "decision_set",
+    "request_sha256",
+    "question_schema_version",
+    "policy_version",
+    "answers",
+    "fallback_used"
+  ],
+  "properties": {
+    "schema": {
+      "const": "semantic-decision-receipt/v1"
+    },
+    "decision_set": {
+      "type": "string",
+      "minLength": 1
+    },
+    "request_sha256": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "question_schema_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "answers": {
+      "type": "object"
+    },
+    "policy_outcome": {},
+    "fallback_used": {
+      "type": "boolean"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "usage": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "latency_ms": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    }
+  },
+  "additionalProperties": true
+}

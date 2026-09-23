@@ -1,0 +1,43 @@
+{
+  "classification": [
+    "PROJECT-SPECIFIC",
+    "INTERNAL-DERIVED",
+    "INTERNAL-RECOMMENDATION"
+  ],
+  "agent_workflow": {
+    "preserve_deterministic_authority": [
+      "evaluation plan structural validation",
+      "sealed evidence and receipt verification",
+      "scope/reference checks",
+      "hard review gates",
+      "lifecycle/acknowledgement authority",
+      "allowlist/model policy"
+    ],
+    "opportunities": [
+      "semantic routing enrichment",
+      "semantic skill-eval second pass",
+      "evidence fidelity assistance",
+      "review/inbox attention triage",
+      "evaluation-plan semantic diagnostics"
+    ],
+    "packaging": "optional/lazy semantic plugin or extra; advisory artifact before lifecycle hooks"
+  },
+  "specgen": {
+    "preserve_deterministic_authority": [
+      "canonical JSON and append-only decisions",
+      "schema/reference/cycle/digest validation",
+      "repository evidence artifact",
+      "finalization rules"
+    ],
+    "opportunities": [
+      "separate semantic assessment artifact",
+      "semantic elicitation diagnostics",
+      "brownfield focus ranking",
+      "user-question vs repository-research routing",
+      "repository evidence relevance",
+      "requirement quality dimensions",
+      "semantic duplicate/conflict diagnostics",
+      "evaluation-intent assistance"
+    ]
+  }
+}
