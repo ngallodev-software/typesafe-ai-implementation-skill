@@ -1,22 +1,22 @@
 ---
-name: typesafe-impl-internal
+name: typesafe-ai-implementation
 description: >
-  Internal implementation skill for identifying high-leverage semantic decision seams
-  and integrating TypeSafe AI / Jev into existing tools without displacing deterministic
+  Implementation skill for identifying high-leverage semantic decision seams and
+  integrating TypeSafe AI / Jev into existing tools without displacing deterministic
   authority. Use when an agent must assess a codebase, design a bounded TypeSafe harness,
   choose Choice/Noul/Score questions, implement an adapter and policy boundary, add
   receipts/fallbacks/evals, or retrofit TypeSafe into routing, ranking, evidence,
   verification, requirements, brownfield analysis, or other semantic decision paths.
-license: Internal use only
+license: Apache-2.0
 metadata:
-  visibility: internal
+  visibility: public
   status: experimental
   version: 0.1.0
-  source_scope: mixed-public-user-provided-and-internal-derived
+  source_scope: public-vendor-sources-and-project-derived-guidance
   credentials_required_by_skill: false
 ---
 
-# TypeSafe Implementation — Internal
+# TypeSafe AI Implementation Skill
 
 This skill is an **implementation and integration guide**, not a credentialed TypeSafe
 client and not a replacement for TypeSafe's live documentation. The skill itself must
@@ -27,13 +27,13 @@ in the target application's normal runtime secret/configuration mechanism. Do no
 credentials in this skill, generated examples, fixtures, receipts, logs, or source
 control.
 
-## Internal status
+## Publication and provenance
 
-Treat this entire skill as **INTERNAL** until each claim or recommendation has been
-classified for public release. See `INTERNAL.md` and `references/00-provenance.md`.
-The separation is deliberate: public TypeSafe contracts, our derived implementation
-patterns, and project-specific recommendations are stored distinctly so a future
-`typesafe-impl-public` skill can be extracted cleanly.
+This repository is a public, experimental implementation guide. It separates
+public TypeSafe contracts, independently authored implementation patterns, and
+project-specific recommendations so readers can distinguish vendor behavior from
+engineering judgment. See `PROVENANCE.md`, `THIRD_PARTY_NOTICES.md`, and
+`references/00-provenance.md`.
 
 ## Core operating rule
 
