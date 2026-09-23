@@ -1,6 +1,6 @@
 # Failures, fallback, and security
 
-**Classification:** PUBLIC-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PUBLIC-DERIVED / PROJECT-GUIDANCE
 
 ## Failure classes
 
