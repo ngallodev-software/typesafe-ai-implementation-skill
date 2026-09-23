@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 REQUIRED = [
     ROOT / "SKILL.md",
-    ROOT / "INTERNAL.md",
+    ROOT / "PROVENANCE.md",
     ROOT / "references" / "00-provenance.md",
     ROOT / "references" / "12-public-source-index.md",
     ROOT / "assets" / "semantic-decision-receipt.schema.json",
@@ -24,10 +24,10 @@ for path in REQUIRED:
 skill = (ROOT / "SKILL.md").read_text(encoding="utf-8") if (ROOT / "SKILL.md").exists() else ""
 if not skill.startswith("---\n"):
     errors.append("SKILL.md missing YAML frontmatter")
-if "name: typesafe-impl-internal" not in skill:
-    errors.append("SKILL.md has wrong/missing internal skill name")
-if "visibility: internal" not in skill:
-    errors.append("SKILL.md missing visibility: internal")
+if "name: typesafe-ai-implementation" not in skill:
+    errors.append("SKILL.md has wrong/missing public skill name")
+if "visibility: public" not in skill:
+    errors.append("SKILL.md missing visibility: public")
 if "credentials_required_by_skill: false" not in skill:
     errors.append("SKILL.md must declare credentials_required_by_skill: false")
 
@@ -59,13 +59,13 @@ for path in ROOT.rglob("*"):
             break
 
 if errors:
-    print("typesafe-impl-internal validation FAILED")
+    print("typesafe-ai-implementation validation FAILED")
     for error in errors:
         print(f"- {error}")
     sys.exit(1)
 
-print("typesafe-impl-internal validation OK")
-print("- YAML/internal markers present")
+print("typesafe-ai-implementation validation OK")
+print("- public YAML metadata present")
 print("- JSON files parse")
 print("- no forbidden secret files")
 print("- no obvious embedded credential values")
