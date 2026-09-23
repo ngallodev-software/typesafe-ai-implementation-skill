@@ -4,13 +4,13 @@
   "purpose": "Machine-optimized implementation contract for integrating TypeSafe AI Jev as a bounded semantic-decision layer.",
   "design_invariant": "Application code owns workflow authority, policy, side effects, persistence, authorization, deterministic validation, thresholds, and escalation. TypeSafe supplies narrow typed semantic judgments only.",
   "sources": {
-    "attached_skill": "typesafe-ai SKILL.md supplied by user",
+    "attached_skill": "https://github.com/typesafe-ai/skills (public MIT-licensed agent skills)",
     "docs_index": "https://docs.typesafe.ai/llms.txt",
     "official_python_sdk": "https://github.com/typesafe-ai/typesafe-sdk-python",
     "official_javascript_sdk": "https://github.com/typesafe-ai/typesafe-sdk-js",
     "official_launch_post": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
-    "access_note": "Direct docs.typesafe.ai page retrieval was unavailable in this session; API/SDK details were cross-verified against current official SDK source. Re-check live docs before future implementation."
+    "provenance": "Vendor behavior should be rechecked against current live documentation and the SDK version in use."
   },
-  "internal_package": true,
-  "public_release_status": "not-cleared"
+  "internal_package": false,
+  "public_release_status": "public-experimental"
 }
