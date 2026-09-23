@@ -1,9 +1,8 @@
 # typesafe-impl-internal
 
-Internal agent skill for implementing TypeSafe semantic-decision leverage in existing
+Agent skill for implementing TypeSafe semantic-decision leverage in existing
 applications. Start with `SKILL.md`.
 
-This package is intentionally marked internal and is **not public-release-cleared**.
 It contains no runtime credentials and its helper scripts run without an API key.
 
 ## Layout
