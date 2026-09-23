@@ -1,8 +1,8 @@
 # Harness architecture
 
-**Classification:** INTERNAL-DERIVED / INTERNAL-RECOMMENDATION
+**Classification:** PROJECT-DERIVED / PROJECT-GUIDANCE
 
-The default internal reference architecture is intentionally small.
+The default reference architecture is intentionally small.
 
 ```text
 StateProjector
