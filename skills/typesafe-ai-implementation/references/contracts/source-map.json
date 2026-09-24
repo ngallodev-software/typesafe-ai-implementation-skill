@@ -18,19 +18,9 @@
       "PROJECT-DERIVED",
       "PROJECT-GUIDANCE"
     ],
-    "references/10-agent-workflow-integration.md": [
-      "PROJECT-SPECIFIC",
-      "PROJECT-DERIVED",
-      "PROJECT-GUIDANCE"
-    ],
-    "references/11-specgen-integration.md": [
-      "PROJECT-SPECIFIC",
-      "PROJECT-DERIVED",
-      "PROJECT-GUIDANCE"
-    ],
     "references/12-public-source-index.md": [
       "PUBLIC-SOURCE"
     ]
   },
-  "public_extraction_rule": "Keep vendor-sourced behavior, project-derived analysis, and project-specific guidance explicitly labeled so readers can distinguish contracts from engineering judgment."
+  "public_extraction_rule": "Keep vendor-sourced behavior and independently authored engineering guidance explicitly labeled so readers can distinguish contracts from recommendations."
 }

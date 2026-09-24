@@ -13,7 +13,6 @@ guidance so source boundaries remain explicit and reviewable.
 | `PUBLIC-DERIVED` | Our restatement of public behavior | Usually |
 | `PROJECT-DERIVED` | Original analysis produced for this repository | Yes; distinguish it from vendor claims |
 | `PROJECT-GUIDANCE` | Original integration architecture or operational advice | Yes; engineering judgment, not vendor contract |
-| `PROJECT-SPECIFIC` | Agent-Workflow / SpecGen observations or recommendations | Yes when based on intentionally public project context |
 
 ## Source hierarchy
 
@@ -23,6 +22,6 @@ For implementation-time facts, prefer in this order:
 2. currently installed/selected official SDK reference and types;
 3. official public SDK repository;
 4. public TypeSafe examples/cookbooks;
-5. this repository snapshot.
+5. this guide's documented snapshot.
 
 Version-dependent details in this skill are snapshots, not permanent guarantees.

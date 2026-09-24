@@ -12,8 +12,6 @@ The material is intentionally separated into four source classes:
 - `PROJECT-DERIVED` / `PROJECT-GUIDANCE` — original engineering analysis,
   patterns, architecture guidance, and testing recommendations produced for this
   repository.
-- `PROJECT-SPECIFIC` — analysis of public ngallodev-software projects such as
-  Agent-Workflow and SpecGen-AW.
 
 Vendor behavior should always be checked against the current TypeSafe
 documentation and SDK version in use. Project guidance is not a claim about

@@ -34,10 +34,10 @@ request and minimize state sent to the API.
 
 ## Publication and provenance
 
-This repository is a public, experimental implementation guide. It separates
-public TypeSafe contracts, independently authored implementation patterns, and
-project-specific recommendations so readers can distinguish vendor behavior from
-engineering judgment. See `PROVENANCE.md`, `THIRD_PARTY_NOTICES.md`, and
+This is a public, experimental implementation guide. It separates public TypeSafe
+contracts from independently authored implementation patterns so readers can
+distinguish vendor behavior from engineering judgment. See `PROVENANCE.md`,
+`THIRD_PARTY_NOTICES.md`, and
 `references/00-provenance.md`.
 
 ## Core operating rule
@@ -82,10 +82,7 @@ not become a generic model layer, workflow engine, or authorization engine.
 2. Read `references/01-programming-model.md` and `references/05-harness-architecture.md`.
 3. Read the current live TypeSafe docs and the SDK page for the language being used.
    Start from `references/12-public-source-index.md`.
-4. If working in Agent-Workflow or SpecGen, also read the corresponding project note:
-   `references/10-agent-workflow-integration.md` or
-   `references/11-specgen-integration.md`.
-5. Do not begin by adding a dependency or framework. First identify the semantic decision
+4. Do not begin by adding a dependency or framework. First identify the semantic decision
    seam and decide whether Jev improves on deterministic code or an existing model.
 6. Scale the design to the task: a small, low-risk integration may need only a focused SDK
    call and a clear caller-side branch. Add adapters, durable receipts, policy layers, and
@@ -402,17 +399,7 @@ it complete, verify that:
 - semantic eval cases exist for the behavior being automated;
 - rollout level matches measured evidence.
 
-## Related implementations and sources
-
-This skill provides the design workflow; these repositories show specific consumer
-boundaries. Use them as implementation examples, not as replacements for the
-target repository's current contracts:
-
-- [Agent-Workflow's built-in TypeSafe routing integration](https://github.com/ngallodev-software/agent-workflow#optional-bounded-semantic-decisions)
-- [Standalone Agent-Workflow TypeSafe adapter](https://github.com/ngallodev-software/agent-workflow-typesafe-ai)
-- [Benchmark qualification, advisory review, and post-seal scoring](https://github.com/ngallodev-software/agent-workflow-benchmark)
-- [Neutral comparative-evaluation contracts](https://github.com/ngallodev-software/agent-workflow-comparative-eval)
-- [Published BM3, BM4, and BM5 evidence](https://github.com/ngallodev-software/agent-workflow-benchmark-results)
+## Further reading
 
 For vendor behavior, consult the [TypeSafe documentation](https://docs.typesafe.ai/llms.txt),
 [coding-agent guide](https://docs.typesafe.ai/introduction/coding-agents),
@@ -421,6 +408,4 @@ For vendor behavior, consult the [TypeSafe documentation](https://docs.typesafe.
 [typed primitives](https://docs.typesafe.ai/primitives.md), and the
 [Python SDK](https://docs.typesafe.ai/sdk/python.md). Jev/System One is described in
 the [TypeSafe announcement](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
-The links and cross-project notes are also collected in this repository's
-[README](README.md#where-the-ideas-are-applied); project-specific references remain
-subject to the provenance guidance in `PROVENANCE.md`.
+For package contents and provenance, see `README.md` and `PROVENANCE.md`.

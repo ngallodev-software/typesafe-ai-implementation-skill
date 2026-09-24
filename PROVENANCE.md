@@ -4,16 +4,14 @@ This repository is a public, experimental implementation guide maintained by
 **ngallodev-software**. It is independent of TypeSafe AI and is not an official
 TypeSafe product, skill, or endorsement.
 
-The material is intentionally separated into four source classes:
+The material is intentionally separated into three source classes:
 
 - `PUBLIC-SOURCE` — factual behavior traceable to current public TypeSafe
   documentation, SDKs, or source.
 - `PUBLIC-DERIVED` — independently written restatements of public behavior.
 - `PROJECT-DERIVED` / `PROJECT-GUIDANCE` — original engineering analysis,
   patterns, architecture guidance, and testing recommendations produced for this
-  repository.
-- `PROJECT-SPECIFIC` — analysis of public ngallodev-software projects such as
-  Agent-Workflow and SpecGen-AW.
+  guide.
 
 Vendor behavior should always be checked against the current TypeSafe
 documentation and SDK version in use. Project guidance is not a claim about

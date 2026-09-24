@@ -13,4 +13,4 @@ This companion guides ChatGPT and Codex while they help integrate Jev into appli
 - [Offline scaffolding and validation scripts](scripts/)
 - [Templates and schemas](assets/)
 
-This is an independent implementation guide maintained by **ngallodev-software**, not an official TypeSafe AI product, skill, or endorsement. Its guidance combines public vendor documentation and SDK behavior with independently authored engineering patterns and project-specific analysis. Recheck vendor behavior against current documentation and the SDK version in use.
+This is an independent implementation guide maintained by **ngallodev-software**, not an official TypeSafe AI product, skill, or endorsement. Its guidance combines public vendor documentation and SDK behavior with independently authored engineering patterns. Recheck vendor behavior against current documentation and the SDK version in use.

@@ -46,3 +46,21 @@ and the validation performed. Keep full implementation detail in the skill and r
 - `git diff --check` passed. The local personal plugin copy was synchronized and its
   cachebuster refreshed; its reinstall command is not available in the installed
   `codex-cli 0.31.0`, so the app may require a restart/new task to reload it.
+
+## 2026-09-24 — Public Plugins Directory preparation
+
+- Removed first-party Agent-Workflow, SpecGen, portfolio, and benchmark case studies
+  from the skill and README so the plugin presents a general TypeSafe integration
+  workflow. Retained maintainer identity and third-party notices.
+- Added an OpenAI public-submission checklist. The plugin is skills-only, which OpenAI
+  supports without an MCP server.
+- Before public submission, the maintainer still needs a verified publisher identity,
+  Apps Management write access, public listing/support/privacy/terms details, starter
+  prompts, five positive and three negative test cases, availability regions, and
+  release notes. Submission review and approval precede publication.
+
+### Sources checked
+
+- [OpenAI: Submit plugins](https://developers.openai.com/plugins/deploy/submission)
+- [OpenAI: Plugin guidelines](https://developers.openai.com/plugins/app-guidelines)
+- [OpenAI: Submission errors](https://developers.openai.com/plugins/deploy/submission-errors)
