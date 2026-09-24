@@ -9,10 +9,10 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / "plugins" / "typesafe-ai-implementation"
-DEST = ROOT / "marketplace-submission" / "jev-ai-implementation-0.1.2.zip"
+DEST = ROOT / "marketplace-submission" / "typesafe-ai-implementation-0.1.3.zip"
 
 manifest = json.loads((PLUGIN / ".codex-plugin" / "plugin.json").read_text(encoding="utf-8"))
-if manifest["version"] != "0.1.2":
+if manifest["version"] != "0.1.3":
     raise SystemExit("Update DEST and release notes for the current plugin version before packaging")
 
 with ZipFile(DEST, "w", compression=ZIP_DEFLATED, compresslevel=9) as archive:

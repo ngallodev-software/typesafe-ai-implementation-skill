@@ -1,28 +1,28 @@
 {
   "name": "typesafe-ai-implementation",
-  "version": "0.1.2",
-  "description": "ChatGPT and Codex companion guide for building bounded Jev integrations in software.",
+  "version": "0.1.3",
+  "description": "Independent ChatGPT and Codex guide for building bounded TypeSafe AI integrations in software.",
   "author": {
     "name": "ngallodev-software",
     "url": "https://github.com/ngallodev-software"
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "Jev AI Implementation",
-    "shortDescription": "Plan Jev code integrations",
-    "longDescription": "An independent coding-agent guide for assessing an application, identifying a bounded semantic decision, and planning a focused TypeSafe AI / Jev integration. It includes offline Python and TypeScript scaffolds and keeps application policy, validation, and side effects in application code. It is not an official TypeSafe AI product and does not call the TypeSafe API. For current API behavior, consult TypeSafe's official agent skill, documentation, and SDK.",
+    "displayName": "TypeSafe AI Implementation",
+    "shortDescription": "Plan TypeSafe integrations",
+    "longDescription": "An independent coding-agent guide for assessing an application, identifying a bounded semantic decision, and planning a focused TypeSafe AI integration. It includes offline Python and TypeScript scaffolds and keeps application policy, validation, and side effects in application code. This is not an official TypeSafe AI product and does not call the TypeSafe API. Jev is TypeSafe AI's System One model; for current API behavior, consult TypeSafe's official agent skill, documentation, and SDK.",
     "developerName": "ngallodev-software",
     "category": "Developer Tools",
     "capabilities": [
-      "Assess codebases for bounded Jev integration opportunities",
+      "Assess codebases for bounded TypeSafe AI integration opportunities",
       "Generate minimal Python and TypeScript integration scaffolds"
     ],
-    "composerIcon": "./assets/jev-plugin-icon.png",
-    "logo": "./assets/jev-plugin-logo.png",
+    "composerIcon": "./assets/typesafe-ai-icon.png",
+    "logo": "./assets/typesafe-ai-logo.png",
     "defaultPrompt": [
-      "Review this codebase for one bounded Jev integration opportunity and propose a minimal implementation plan.",
-      "Inspect this code for a semantic decision that could use Jev; distinguish it from deterministic rules.",
-      "Use the Jev skill to scaffold a minimal Python or TypeScript integration after checking current TypeSafe docs."
+      "Review this codebase for one bounded TypeSafe AI integration opportunity and propose a minimal implementation plan.",
+      "Inspect this code for a semantic decision that could use TypeSafe AI; distinguish it from deterministic rules.",
+      "Use the TypeSafe AI skill to scaffold a minimal Python or TypeScript integration after checking current docs."
     ]
   }
 }

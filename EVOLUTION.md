@@ -5,6 +5,35 @@ Append new entries rather than rewriting older decisions. For each update, recor
 reason, the user-visible behavior or contract that changed, the authoritative docs checked,
 and the validation performed. Keep full implementation detail in the skill and references.
 
+## 2026-09-24 — Public listing clarity and reproducible review cases
+
+- Renamed the public listing to **TypeSafe AI Implementation**. The skill/package slug
+  remains `typesafe-ai-implementation`; Jev remains in the technical guide as the name of
+  TypeSafe AI's System One model.
+- Clarified that the plugin is an independent integration guide, not an official product
+  or endorsement. The listing uses vendor product names descriptively and does not use
+  TypeSafe/Jev logos or wordmarks.
+- Confirmed TypeSafe's Terms of Use say its site materials are protected and reserve
+  rights not expressly granted; the terms do not grant logo permission. The generated
+  icon and logo are generic abstract circuit artwork, and their filenames now reflect
+  that. This is a statement of package provenance, not a legal clearance.
+- Reworked the 5 positive and 3 negative submission cases around a small inline Python
+  and TypeScript fixture, concrete inputs, and observable expected behavior. No API key,
+  account, or live call is required.
+- Aligned plugin descriptions across manifests, updated the local marketplace display
+  name, and bumped plugin package version to 0.1.3.
+
+### Sources checked
+
+- [TypeSafe AI Terms of Use](https://typesafe.ai/legal/terms)
+- [OpenAI Terms of Use — ownership of output](https://openai.com/policies/terms-of-use/)
+- [TypeSafe AI agent skill](https://docs.typesafe.ai/agent-skill)
+- [OpenAI plugin submission guidance](https://developers.openai.com/plugins/deploy/submission)
+
+### Validation
+
+- Pending final manifest, skill, and ZIP validation for 0.1.3.
+
 ## 2026-09-24 — ChatGPT and Codex plugin package
 
 - Added the Jev AI Implementation plugin under `plugins/typesafe-ai-implementation/`,

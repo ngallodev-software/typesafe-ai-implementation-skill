@@ -1,7 +1,7 @@
-# Release notes — Jev AI Implementation 0.1.2
+# Release notes — TypeSafe AI Implementation 0.1.3
 
-Initial public directory submission of the skills-only Jev AI Implementation plugin.
-It helps coding agents identify bounded TypeSafe AI / Jev decision seams, preserve
-application-owned deterministic policy, consult current vendor documentation, and use
-offline Python and TypeScript scaffolds. The plugin does not call TypeSafe or require
-credentials. The package includes a companion listing logo and composer icon.
+Updated the public listing name to TypeSafe AI Implementation and clarified that Jev is
+the model, while the plugin is an independent integration guide. Added self-contained
+review fixtures with concrete expected behavior, aligned manifest descriptions, and
+renamed the original generated abstract artwork so it is not presented as a vendor logo.
+The skills-only plugin does not call TypeSafe or require credentials.

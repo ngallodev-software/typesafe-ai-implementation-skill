@@ -1,7 +1,7 @@
 {
   "name": "jev-implementation",
   "interface": {
-    "displayName": "Jev Implementation"
+    "displayName": "TypeSafe AI Implementation"
   },
   "plugins": [
     {

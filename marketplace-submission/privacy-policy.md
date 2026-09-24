@@ -1,10 +1,10 @@
-# Privacy policy draft — Jev AI Implementation
+# Privacy policy draft — TypeSafe AI Implementation
 
 **Publisher:** ngallodev-software
 
 **Effective date:** Set this date when publishing the policy.
 
-Jev AI Implementation is a skills-only plugin. It contains instructions, documentation,
+TypeSafe AI Implementation is an independent, skills-only plugin. It contains instructions, documentation,
 templates, and local scaffolding examples. It has no MCP server, does not call the
 TypeSafe API, and does not independently collect, transmit, or retain user data.
 
