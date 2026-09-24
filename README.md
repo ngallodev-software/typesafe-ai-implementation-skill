@@ -10,6 +10,8 @@
 **Start here:** [`SKILL.md`](SKILL.md) · [Design references](references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
 
+**Portfolio context:** [Agent-Workflow TypeSafe AI case study](https://ngallodev-software.uk/projects/agent-workflow-typesafe-ai)
+
 This is an independent implementation guide maintained by **ngallodev-software**.
 It is not an official TypeSafe AI skill, product, or endorsement. The repository
 combines public TypeSafe documentation and SDK behavior with independently authored
