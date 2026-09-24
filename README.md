@@ -7,7 +7,7 @@
 ![Status](https://img.shields.io/badge/status-experimental-orange)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
 
-**Start here:** [`SKILL.md`](SKILL.md) · [Design references](references/) ·
+**Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
 
 **Portfolio context:** [Agent-Workflow TypeSafe AI case study](https://ngallodev-software.uk/projects/agent-workflow-typesafe-ai)
@@ -59,8 +59,8 @@ flowchart LR
 
 The skill includes design references, provenance tags, evaluation patterns, and
 offline scaffolding for Python and TypeScript. Its helpers do not call TypeSafe or
-require an API key. See the [skill operating guide](SKILL.md),
-[reference map](references/), and [offline scripts](scripts/).
+require an API key. See the [skill operating guide](skills/typesafe-ai-implementation/SKILL.md),
+[reference map](skills/typesafe-ai-implementation/references/), and [offline scripts](skills/typesafe-ai-implementation/scripts/).
 
 ## Where the ideas are applied
 
@@ -76,7 +76,7 @@ and evaluation contracts. Their authority remains with the consuming application
 | [Benchmark Results](https://github.com/ngallodev-software/agent-workflow-benchmark-results) | Publishes sanitized qualification summaries and paired benchmark evidence. | Current BM3–BM5 evidence is single-pair development data; it cannot establish a generalized winner or a causal TypeSafe effect. |
 
 The Agent-Workflow reference in this skill is project-specific. The
-[SpecGen-AW reference](references/11-specgen-integration.md) describes design
+[SpecGen-AW reference](skills/typesafe-ai-implementation/references/11-specgen-integration.md) describes design
 opportunities and boundaries; it should not be read as a claim that every proposed
 integration has shipped.
 
