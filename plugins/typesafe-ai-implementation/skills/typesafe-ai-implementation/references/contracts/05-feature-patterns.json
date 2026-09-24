@@ -1,0 +1,69 @@
+{
+  "feature_patterns": [
+    {
+      "id": "semantic_router",
+      "primitive": "choice",
+      "inputs": [
+        "request",
+        "allowed_candidates",
+        "policy_summary"
+      ],
+      "output": "candidate id plus distribution",
+      "authority_rule": "selected id must still pass deterministic allowlist/permission/model-policy checks",
+      "fallback": "existing deterministic route or reasoning/human escalation"
+    },
+    {
+      "id": "ambiguity_gate",
+      "primitive": "noul",
+      "questions": [
+        "Does this input have multiple plausible behavioral interpretations?",
+        "Does resolution require a product/policy/user decision absent from state?"
+      ],
+      "output": "probabilities used to decide ask-user/escalation policy"
+    },
+    {
+      "id": "evidence_reranker",
+      "primitive": "score_or_noul_per_candidate",
+      "pipeline": [
+        "broad deterministic/lexical retrieval",
+        "parallel semantic relevance judgments",
+        "code selects top-K",
+        "reasoning model/human reads narrowed evidence"
+      ],
+      "rule": "TypeSafe narrows context; it does not substitute for source evidence."
+    },
+    {
+      "id": "claim_evidence_verifier",
+      "primitive": "noul",
+      "state": [
+        "claim",
+        "candidate evidence",
+        "provenance",
+        "applicable policy"
+      ],
+      "rule": "use exact deterministic checks instead when exact verification is possible"
+    },
+    {
+      "id": "quality_dimensions",
+      "primitive": "multiple_score",
+      "dimensions_example": [
+        "specificity",
+        "testability",
+        "evidence support",
+        "scope clarity",
+        "compatibility coverage"
+      ],
+      "rule": "compose dimensions in application code with explicit formula/policy"
+    },
+    {
+      "id": "hierarchical_classifier",
+      "primitive": "choice_then_choice",
+      "rule": "coarse category first, then branch-specific Choice; useful for large taxonomies/high-cardinality sets"
+    },
+    {
+      "id": "system_one_system_two_cascade",
+      "primitive": "mixed",
+      "rule": "Jev handles narrow fast judgments; low-confidence/high-consequence/complex cases escalate to a reasoning model or human; preserve separate receipts"
+    }
+  ]
+}

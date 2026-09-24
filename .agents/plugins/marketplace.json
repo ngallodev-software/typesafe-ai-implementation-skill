@@ -1,0 +1,20 @@
+{
+  "name": "jev-implementation",
+  "interface": {
+    "displayName": "Jev Implementation"
+  },
+  "plugins": [
+    {
+      "name": "typesafe-ai-implementation",
+      "source": {
+        "source": "local",
+        "path": "./plugins/typesafe-ai-implementation"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

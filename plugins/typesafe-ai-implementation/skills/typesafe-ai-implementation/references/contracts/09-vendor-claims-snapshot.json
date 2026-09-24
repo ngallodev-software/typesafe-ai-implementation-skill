@@ -1,0 +1,13 @@
+{
+  "pricing_input_usd_per_million_tokens": 0.042,
+  "output_charge": "vendor states free/too cheap to meter",
+  "reported_latency_ms": "70-500 in vendor environment",
+  "status": "early access",
+  "architecture_notes": [
+    "new architecture",
+    "parallel sampler",
+    "RLCD"
+  ],
+  "do_not_hardcode": true,
+  "caveat": "Vendor-published figures and benchmarks; monitor and independently evaluate for the target workload."
+}

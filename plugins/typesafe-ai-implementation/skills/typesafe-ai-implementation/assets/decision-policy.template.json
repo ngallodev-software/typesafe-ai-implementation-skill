@@ -1,0 +1,13 @@
+{
+  "schema": "semantic-decision-policy/v1",
+  "policy_version": "replace-me/v1",
+  "mode": "shadow",
+  "thresholds": {
+    "example_only": "Do not copy demo numbers. Calibrate on representative application data."
+  },
+  "fallbacks": {
+    "transport_failure": "existing_authority_path",
+    "semantic_uncertainty": "escalate",
+    "no_match": "existing_authority_path"
+  }
+}

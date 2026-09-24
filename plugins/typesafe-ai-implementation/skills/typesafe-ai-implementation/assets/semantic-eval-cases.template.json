@@ -1,0 +1,13 @@
+{
+  "schema": "semantic-eval-cases/v1",
+  "decision_set": "replace-me/v1",
+  "cases": [
+    {
+      "id": "case-001",
+      "state": {},
+      "expected_application_behavior": "Describe the reviewed outcome, not only a model label.",
+      "expected_constraints": [],
+      "notes": "Include boundary/adversarial cases and provenance."
+    }
+  ]
+}

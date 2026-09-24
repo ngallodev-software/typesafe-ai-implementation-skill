@@ -1,0 +1,18 @@
+{
+  "failure_semantics": {
+    "invalid_local_input": "fail before API call",
+    "transport_or_service_failure": "apply explicit fallback; never silently treat as positive/approved",
+    "semantic_uncertainty": "successful call with diffuse/borderline probabilities; escalate by policy; do not retry identical request merely to seek another answer",
+    "authority_bearing_default": "fail closed or fall back to existing authority path"
+  },
+  "security": {
+    "requirements": [
+      "API key server-side only",
+      "do not put key in state/logs/receipts/fixtures/client bundles",
+      "minimize sent state",
+      "apply organization data-handling policy",
+      "revalidate model-selected identifiers locally",
+      "type safety is not authorization or truth"
+    ]
+  }
+}

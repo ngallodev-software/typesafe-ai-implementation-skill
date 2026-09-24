@@ -1,0 +1,54 @@
+{
+  "base_url": "https://api.typesafe.ai",
+  "system_one_path": "/v1/systemone",
+  "models_path": "/v1/models",
+  "auth": {
+    "scheme": "Bearer",
+    "environment_variable": "TYPESAFE_API_KEY",
+    "header": "Authorization"
+  },
+  "default_model": "jev-latest",
+  "python": {
+    "package": "typesafe-sdk",
+    "primary_client": "TypeSafeClient",
+    "question_types": [
+      "Choice",
+      "Noul",
+      "Score"
+    ],
+    "environment_variables": [
+      "TYPESAFE_API_KEY",
+      "TYPESAFE_BASE_URL",
+      "TYPESAFE_DEFAULT_MODEL",
+      "TYPESAFE_LOG_LEVEL"
+    ],
+    "default_request_timeout_seconds": 10.0,
+    "retry_policy": {
+      "max_retries_after_initial": 2,
+      "retry_http_statuses": "408, 429, 500-599",
+      "retry_connection_errors": true,
+      "retry_timeout_errors": true,
+      "respect_retry_after": true,
+      "backoff_initial_seconds": 0.5,
+      "backoff_max_seconds": 5.0,
+      "backoff_jitter_fraction": 0.25,
+      "default_total_retry_budget_seconds": 30.0
+    }
+  },
+  "javascript": {
+    "package": "@typesafe-ai/sdk",
+    "primary_client": "TypeSafeClient",
+    "response_answer_container": "answers"
+  },
+  "request_shape": {
+    "required": [
+      "state",
+      "questions"
+    ],
+    "optional": [
+      "model"
+    ],
+    "state": "JSON-compatible structured or unstructured application state",
+    "questions": "mapping from application question keys to typed question definitions"
+  }
+}

@@ -1,0 +1,23 @@
+/** Reference skeleton only. Adapt to the host repository.
+ * Contains no API key and no business thresholds.
+ * Verify imports/call signatures against the current TypeSafe JS SDK before use.
+ */
+
+export interface SemanticDecisionRequest {
+  decisionSet: string;
+  questionSchemaVersion: string;
+  policyVersion: string;
+  state: unknown;
+  questions: Record<string, unknown>;
+  model?: string;
+}
+
+export interface SemanticDecisionResult {
+  model?: string;
+  answers: Record<string, unknown>;
+  transportFailed: boolean;
+  errorKind?: string;
+}
+
+// Bind to @typesafe-ai/sdk in the target repository. Keep this adapter thin;
+// policy thresholds and authority checks belong outside it.

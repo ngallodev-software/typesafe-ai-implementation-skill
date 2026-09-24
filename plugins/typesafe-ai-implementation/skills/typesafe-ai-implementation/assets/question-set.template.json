@@ -1,0 +1,30 @@
+{
+  "schema": "typesafe-question-set/v1",
+  "question_set_id": "replace-me/v1",
+  "model": "jev-latest",
+  "notes": "Runtime model/config should be verified against current docs. No credentials belong here.",
+  "questions": {
+    "example_choice": {
+      "type": "choice",
+      "instructions": "Which supplied candidate best matches the state? Use no_match when none fit.",
+      "criteria": {
+        "candidate_a": "Describe A",
+        "candidate_b": "Describe B",
+        "no_match": "None fit"
+      }
+    },
+    "example_noul": {
+      "type": "noul",
+      "instructions": "Does the supplied evidence support the stated claim?"
+    },
+    "example_score": {
+      "type": "score",
+      "instructions": "How strong is the evidence support?",
+      "criteria": [
+        "none: no support",
+        "weak: limited support",
+        "strong: direct support"
+      ]
+    }
+  }
+}

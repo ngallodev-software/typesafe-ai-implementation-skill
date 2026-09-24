@@ -1,0 +1,20 @@
+{
+  "name": "typesafe-ai-implementation",
+  "version": "0.1.1",
+  "description": "ChatGPT and Codex companion guide for building bounded Jev integrations in software.",
+  "author": {
+    "name": "ngallodev-software",
+    "url": "https://github.com/ngallodev-software"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Jev AI Implementation",
+    "shortDescription": "Build bounded Jev integrations in your application.",
+    "longDescription": "A ChatGPT and Codex companion playbook for finding semantic decision seams and implementing appropriately small Jev integrations while keeping application policy and deterministic authority in code. Use TypeSafe's official agent skill and live docs for current API details.",
+    "developerName": "ngallodev-software",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "composerIcon": "./assets/jev-plugin-icon.png",
+    "defaultPrompt": "Review this codebase for a suitable Jev integration and propose a small, current-docs-verified implementation plan."
+  }
+}

@@ -1,0 +1,49 @@
+"""Reference skeleton only. Adapt to the host repository.
+
+This file intentionally contains no API key and no business thresholds.
+Verify imports/call signatures against the current TypeSafe Python SDK before use.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Any, Mapping
+
+
+@dataclass(frozen=True)
+class SemanticDecisionRequest:
+    decision_set: str
+    question_schema_version: str
+    policy_version: str
+    state: Mapping[str, Any]
+    questions: Mapping[str, Any]
+    model: str | None = None
+
+
+@dataclass(frozen=True)
+class SemanticDecisionResult:
+    model: str | None
+    answers: Mapping[str, Any]
+    transport_failed: bool = False
+    error_kind: str | None = None
+
+
+class TypeSafeDecisionClient:
+    """Thin adapter. Keep policy/thresholds elsewhere."""
+
+    def evaluate(self, request: SemanticDecisionRequest) -> SemanticDecisionResult:
+        # Lazy import keeps an optional dependency off deterministic paths.
+        from typesafe_sdk import TypeSafeClient
+
+        kwargs = {"state": dict(request.state), "questions": dict(request.questions)}
+        if request.model is not None:
+            kwargs["model"] = request.model
+
+        with TypeSafeClient() as client:
+            response = client.system_one(**kwargs)
+
+        # Normalize according to the current SDK types in the target repository.
+        # Do not return/store credentials or authorization headers.
+        return SemanticDecisionResult(
+            model=getattr(response, "model", request.model),
+            answers=getattr(response, "answers", {}),
+        )

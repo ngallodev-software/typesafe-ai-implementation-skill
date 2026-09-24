@@ -1,0 +1,63 @@
+{
+  "calibration_and_rollout": {
+    "phases": [
+      "shadow",
+      "advisory",
+      "guarded_automation",
+      "evidence_based_expansion"
+    ],
+    "metrics": [
+      "accuracy/confusion matrix",
+      "precision/recall by Noul threshold",
+      "calibration/reliability",
+      "escalation rate",
+      "false-accept cost",
+      "false-reject cost",
+      "latency",
+      "request cost",
+      "disagreement with current behavior",
+      "paraphrase/state-format stability"
+    ],
+    "version_on_change": [
+      "question instructions",
+      "criteria",
+      "state projection",
+      "model id",
+      "threshold policy",
+      "composition formula"
+    ]
+  },
+  "tests": {
+    "unit": [
+      "state projection/redaction",
+      "candidate construction",
+      "canonical request hashing",
+      "response normalization",
+      "policy composition",
+      "fallbacks",
+      "no-match handling",
+      "post-selection authority validation"
+    ],
+    "live_contract": [
+      "Noul request",
+      "Choice request",
+      "Score request",
+      "mixed batched request",
+      "auth failure",
+      "retry/timeout path",
+      "model selection",
+      "response parsing"
+    ],
+    "semantic_eval": [
+      "representative labeled/adjudicated cases",
+      "application-level outcome tests",
+      "calibration",
+      "high-confidence wrong cases",
+      "low-confidence correct cases",
+      "contradictory/missing evidence",
+      "prompt-like untrusted text in state",
+      "stale policy",
+      "no-valid-candidate cases"
+    ]
+  }
+}

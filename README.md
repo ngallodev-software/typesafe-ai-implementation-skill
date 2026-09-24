@@ -10,7 +10,32 @@
 **Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
 
+This Codex companion helps integrate Jev into applications; it does not replace the LLM
+that powers Codex. For current API and primitive instructions, use TypeSafe's
+[official agent skill](https://docs.typesafe.ai/agent-skill) and
+[coding-agent guide](https://docs.typesafe.ai/introduction/coding-agents).
+
 **Portfolio context:** [Agent-Workflow TypeSafe AI case study](https://ngallodev-software.uk/projects/agent-workflow-typesafe-ai)
+
+## ChatGPT and Codex plugin
+
+This repository includes **Jev AI Implementation**, a skills-based plugin for ChatGPT
+and Codex in the ChatGPT desktop app. It packages this implementation playbook with the
+Jev icon; it helps an agent build applications that call Jev and does not replace the
+coding model or call the TypeSafe API itself.
+
+- Plugin package: [`plugins/typesafe-ai-implementation/`](plugins/typesafe-ai-implementation/)
+- Repo marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
+- Evolution record: [`EVOLUTION.md`](EVOLUTION.md)
+- [OpenAI plugin packaging guide](https://developers.openai.com/plugins/build/plugins) ·
+  [ChatGPT plugins documentation](https://learn.chatgpt.com/docs/plugins?surface=app)
+
+To use it from a local checkout, open this repository in the ChatGPT/Codex desktop app,
+then open **Plugins**, choose **Jev Implementation**, install **Jev AI Implementation**,
+and start a new chat or Codex task. The repo-scoped marketplace definition is at
+`.agents/plugins/marketplace.json`. This is repository marketplace distribution;
+appearing in the public Plugins Directory requires the separate OpenAI submission and
+review process.
 
 ## Summary
 
