@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "typesafe-ai-implementation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ChatGPT and Codex companion guide for assessing and building bounded Jev integrations in software.",
   "author": {
     "name": "ngallodev-software",
@@ -21,13 +21,21 @@
     "com.openai": {
       "interface": {
         "displayName": "Jev AI Implementation",
-        "shortDescription": "Build bounded Jev integrations in your application.",
-        "longDescription": "A ChatGPT and Codex companion playbook for finding semantic decision seams and implementing appropriately small Jev integrations while keeping application policy and deterministic authority in code. Use TypeSafe's official agent skill and live docs for current API details.",
+        "shortDescription": "Plan Jev code integrations",
+        "longDescription": "An independent coding-agent guide for assessing an application, identifying a bounded semantic decision, and planning a focused TypeSafe AI / Jev integration. It includes offline Python and TypeScript scaffolds and keeps application policy, validation, and side effects in application code. It is not an official TypeSafe AI product and does not call the TypeSafe API. For current API behavior, consult TypeSafe's official agent skill, documentation, and SDK.",
         "developerName": "ngallodev-software",
         "category": "Developer Tools",
-        "capabilities": [],
+        "capabilities": [
+          "Assess codebases for bounded Jev integration opportunities",
+          "Generate minimal Python and TypeScript integration scaffolds"
+        ],
         "composerIcon": "./assets/jev-plugin-icon.png",
-        "defaultPrompt": "Review this codebase for a suitable Jev integration and propose a small, current-docs-verified implementation plan."
+        "logo": "./assets/jev-plugin-logo.png",
+        "defaultPrompt": [
+          "Review this codebase for one bounded Jev integration opportunity and propose a minimal implementation plan.",
+          "Inspect this code for a semantic decision that could use Jev; distinguish it from deterministic rules.",
+          "Use the Jev skill to scaffold a minimal Python or TypeScript integration after checking current TypeSafe docs."
+        ]
       }
     }
   }

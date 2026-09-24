@@ -3,8 +3,7 @@
 > A practical engineering playbook for using Jev / System One typed judgments at
 > bounded semantic decision points while keeping application authority in code.
 
-![Skill](https://img.shields.io/badge/skill-0.1.0-blue)
-![Status](https://img.shields.io/badge/status-experimental-orange)
+![Skill](https://img.shields.io/badge/skill-0.1.1-blue)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green)
 
 **Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
@@ -20,7 +19,8 @@ that powers Codex. For current API and primitive instructions, use TypeSafe's
 This repository includes **Jev AI Implementation**, a skills-based plugin for ChatGPT
 and Codex in the ChatGPT desktop app. It packages this implementation playbook with the
 Jev icon; it helps an agent build applications that call Jev and does not replace the
-coding model or call the TypeSafe API itself.
+coding model or call the TypeSafe API itself. The plugin is an independent project, not
+an official TypeSafe AI product or endorsement.
 
 - Plugin package: [`plugins/typesafe-ai-implementation/`](plugins/typesafe-ai-implementation/)
 - Repo marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
@@ -38,13 +38,25 @@ review process.
 ### Public Plugins Directory submission
 
 This local marketplace package is not a public listing. OpenAI accepts skills-only
-plugins, so this package does not need an MCP server. Before submitting, prepare public
-listing fields and working website, support, privacy, and terms URLs; choose a verified
-individual or business publisher identity; and prepare realistic starter prompts, five
-positive and three negative test cases, availability regions, and release notes. The
-submitter also needs **Apps Management: Write** access in the publishing organization.
-OpenAI reviews the draft; approval is required before the publisher can publish it to the
-universal Plugins Directory.
+plugins, so this package does not need an MCP server. The public submission ZIP should
+contain the plugin root (including `plugin.json`, `.codex-plugin/plugin.json`, `skills/`,
+and `assets/`) without the repository marketplace. OpenAI's portal validates the upload,
+scans the skill, and collects the remaining listing and test materials.
+
+The current [skills-only ZIP](marketplace-submission/jev-ai-implementation-0.1.2.zip),
+[listing draft](marketplace-submission/listing-draft.md), [privacy policy draft](marketplace-submission/privacy-policy.md),
+[release notes](marketplace-submission/release-notes.md), and [test cases](marketplace-submission/test-cases.md)
+are prepared in `marketplace-submission/`. Rebuild the ZIP after package edits with
+`python marketplace-submission/build_zip.py`.
+
+Before submission, confirm a verified individual or business publisher identity and
+**Apps Management: Write** access in the publishing organization. Prepare up to three
+starter prompts, exactly five positive and three negative test cases, availability
+regions, and release notes. Website, support, privacy, and terms URLs are optional for a
+skills-only ZIP according to the submission error reference; OpenAI's privacy guidance
+still expects a published privacy policy, so include one if available. Do not submit
+URLs that are not live and accurate. OpenAI reviews the draft; approval is required
+before the publisher can publish it to the universal Plugins Directory.
 
 See OpenAI's [submission guide](https://developers.openai.com/plugins/deploy/submission),
 [plugin guidelines](https://developers.openai.com/plugins/app-guidelines), and
@@ -98,6 +110,13 @@ The skill includes design references, provenance tags, evaluation patterns, and
 offline scaffolding for Python and TypeScript. Its helpers do not call TypeSafe or
 require an API key. See the [skill operating guide](skills/typesafe-ai-implementation/SKILL.md),
 [reference map](skills/typesafe-ai-implementation/references/), and [offline scripts](skills/typesafe-ai-implementation/scripts/).
+
+## Public submission test cases
+
+Draft starter test cases and expected behaviors for the public plugin review are in
+[`marketplace-submission/test-cases.md`](marketplace-submission/test-cases.md). They are
+review materials for the skills-only listing and do not require an API key or a live
+TypeSafe account.
 
 ## Attribution and source material
 

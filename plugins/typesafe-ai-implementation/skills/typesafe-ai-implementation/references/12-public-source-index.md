@@ -5,7 +5,7 @@
 **Last checked:** 2026-09-24 for the agent-skill boundary, structured question support,
 and confidence guidance. Recheck version-dependent API details when implementing.
 
-Read live sources before implementation. This internal package is a snapshot and should
+Read live sources before implementation. This documentation snapshot should
 not override newer vendor documentation.
 
 - Documentation index: https://docs.typesafe.ai/llms.txt

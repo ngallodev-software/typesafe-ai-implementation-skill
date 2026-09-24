@@ -8,9 +8,8 @@ description: >
 license: Apache-2.0
 metadata:
   visibility: public
-  status: experimental
-  version: 0.1.0
-  source_scope: public-vendor-sources-and-project-derived-guidance
+  version: 0.1.1
+  source_scope: public-vendor-sources-and-independent-engineering-guidance
   credentials_required_by_skill: false
 ---
 
@@ -34,7 +33,7 @@ request and minimize state sent to the API.
 
 ## Publication and provenance
 
-This is a public, experimental implementation guide. It separates public TypeSafe
+This is an independent implementation guide. It separates public TypeSafe
 contracts from independently authored implementation patterns so readers can
 distinguish vendor behavior from engineering judgment. See `PROVENANCE.md`,
 `THIRD_PARTY_NOTICES.md`, and
@@ -84,7 +83,7 @@ not become a generic model layer, workflow engine, or authorization engine.
    Start from `references/12-public-source-index.md`.
 4. Do not begin by adding a dependency or framework. First identify the semantic decision
    seam and decide whether Jev improves on deterministic code or an existing model.
-6. Scale the design to the task: a small, low-risk integration may need only a focused SDK
+5. Scale the design to the task: a small, low-risk integration may need only a focused SDK
    call and a clear caller-side branch. Add adapters, durable receipts, policy layers, and
    evaluation harnesses when the host architecture, audit needs, risk, or rollout requires
    them; do not build the reference architecture by default.

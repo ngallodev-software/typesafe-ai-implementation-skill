@@ -1,6 +1,6 @@
 # Provenance and publication status
 
-This repository is a public, experimental implementation guide maintained by
+This repository is a public implementation guide maintained by
 **ngallodev-software**. It is independent of TypeSafe AI and is not an official
 TypeSafe product, skill, or endorsement.
 

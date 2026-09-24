@@ -64,3 +64,19 @@ and the validation performed. Keep full implementation detail in the skill and r
 - [OpenAI: Submit plugins](https://developers.openai.com/plugins/deploy/submission)
 - [OpenAI: Plugin guidelines](https://developers.openai.com/plugins/app-guidelines)
 - [OpenAI: Submission errors](https://developers.openai.com/plugins/deploy/submission-errors)
+
+## 2026-09-24 — Public submission metadata and package polish
+
+- Shortened the plugin subtitle to meet the 30-character directory limit and generated
+  a companion square listing logo for the existing composer icon.
+- Clarified in public listing copy that this is an independent guide, not an official
+  TypeSafe product, and described its codebase-assessment and offline-scaffolding value.
+- Corrected public snapshot wording and section numbering; removed experimental labels
+  from the public listing and skill metadata.
+- Added three starter prompts and five positive / three negative review cases. Clarified
+  that URLs are optional for skills-only ZIP validation while privacy guidance expects
+  a published policy.
+- Bumped the plugin to 0.1.2 and the bundled skill to 0.1.1.
+- Built `marketplace-submission/jev-ai-implementation-0.1.2.zip` with only plugin-root
+  files and verified its manifests, skills directory, excluded repo marketplace, and
+  archive integrity.
