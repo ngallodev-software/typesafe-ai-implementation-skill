@@ -1,7 +1,7 @@
 {
   "name": "jev-implementation",
   "interface": {
-    "displayName": "TypeSafe AI Implementation"
+    "displayName": "Semantic Decision Integration"
   },
   "plugins": [
     {

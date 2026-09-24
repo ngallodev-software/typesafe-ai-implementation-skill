@@ -16,7 +16,7 @@ that powers Codex. For current API and primitive instructions, use TypeSafe's
 
 ## ChatGPT and Codex plugin
 
-This repository includes **TypeSafe AI Implementation**, a skills-based plugin for
+This repository includes **Semantic Decision Integration**, a skills-based plugin for
 ChatGPT and Codex in the desktop app. It packages this implementation playbook with
 original ChatGPT-generated abstract circuit artwork. It helps an agent build applications
 that use TypeSafe AI's Jev model; it does not replace the coding model or call the
@@ -31,7 +31,7 @@ contains no vendor logo or wordmark.
   [ChatGPT plugins documentation](https://learn.chatgpt.com/docs/plugins?surface=app)
 
 To use it from a local checkout, open this repository in the ChatGPT/Codex desktop app,
-then open **Plugins**, choose **TypeSafe AI Implementation**, install **TypeSafe AI Implementation**,
+then open **Plugins**, choose **Semantic Decision Integration**, install **Semantic Decision Integration**,
 and start a new chat or Codex task. The repo-scoped marketplace definition is at
 `.agents/plugins/marketplace.json`. This is repository marketplace distribution;
 appearing in the public Plugins Directory requires the separate OpenAI submission and
@@ -45,7 +45,7 @@ contain the plugin root (including `plugin.json`, `.codex-plugin/plugin.json`, `
 and `assets/`) without the repository marketplace. OpenAI's portal validates the upload,
 scans the skill, and collects the remaining listing and test materials.
 
-The current [skills-only ZIP](marketplace-submission/typesafe-ai-implementation-0.1.3.zip),
+The current [skills-only ZIP](marketplace-submission/typesafe-ai-implementation-0.1.4.zip),
 [listing draft](marketplace-submission/listing-draft.md), [privacy policy draft](marketplace-submission/privacy-policy.md),
 [release notes](marketplace-submission/release-notes.md), and [test cases](marketplace-submission/test-cases.md)
 are prepared in `marketplace-submission/`. Rebuild the ZIP after package edits with

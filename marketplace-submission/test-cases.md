@@ -1,4 +1,4 @@
-# TypeSafe AI Implementation — public submission test cases
+# Semantic Decision Integration — public submission test cases
 
 These cases test a skills-only coding-agent guide. No TypeSafe account, API key, MCP
 server, or live API call is required. Each prompt is self-contained; attach or paste the

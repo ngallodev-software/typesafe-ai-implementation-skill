@@ -1,10 +1,10 @@
-# Privacy policy draft — TypeSafe AI Implementation
+# Privacy policy draft — Semantic Decision Integration
 
 **Publisher:** ngallodev-software
 
 **Effective date:** Set this date when publishing the policy.
 
-TypeSafe AI Implementation is an independent, skills-only plugin. It contains instructions, documentation,
+Semantic Decision Integration is an independent, skills-only plugin. It contains instructions, documentation,
 templates, and local scaffolding examples. It has no MCP server, does not call the
 TypeSafe API, and does not independently collect, transmit, or retain user data.
 

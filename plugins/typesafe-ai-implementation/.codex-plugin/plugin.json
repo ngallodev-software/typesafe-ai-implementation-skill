@@ -1,6 +1,6 @@
 {
   "name": "typesafe-ai-implementation",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Independent ChatGPT and Codex guide for building bounded TypeSafe AI integrations in software.",
   "author": {
     "name": "ngallodev-software",
@@ -8,8 +8,8 @@
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "TypeSafe AI Implementation",
-    "shortDescription": "Plan TypeSafe integrations",
+    "displayName": "Semantic Decision Integration",
+    "shortDescription": "Plan semantic integrations",
     "longDescription": "An independent coding-agent guide for assessing an application, identifying a bounded semantic decision, and planning a focused TypeSafe AI integration. It includes offline Python and TypeScript scaffolds and keeps application policy, validation, and side effects in application code. This is not an official TypeSafe AI product and does not call the TypeSafe API. Jev is TypeSafe AI's System One model; for current API behavior, consult TypeSafe's official agent skill, documentation, and SDK.",
     "developerName": "ngallodev-software",
     "category": "Developer Tools",

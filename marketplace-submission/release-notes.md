@@ -1,7 +1,7 @@
-# Release notes — TypeSafe AI Implementation 0.1.3
+# Release notes — Semantic Decision Integration 0.1.4
 
-Updated the public listing name to TypeSafe AI Implementation and clarified that Jev is
-the model, while the plugin is an independent integration guide. Added self-contained
-review fixtures with concrete expected behavior, aligned manifest descriptions, and
-renamed the original generated abstract artwork so it is not presented as a vendor logo.
-The skills-only plugin does not call TypeSafe or require credentials.
+Renamed the public listing to Semantic Decision Integration to distinguish it from
+TypeSafe AI and Jev branding. The independent guide still documents how to integrate
+TypeSafe AI and Jev. Added reproducible submission review fixtures, aligned manifest
+metadata, and documented the source of the abstract generated artwork. The skills-only
+plugin does not call TypeSafe or require credentials.

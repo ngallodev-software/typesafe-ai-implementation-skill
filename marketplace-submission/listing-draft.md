@@ -6,8 +6,8 @@ helps developers integrate; the listing and generated artwork do not imply spons
 endorsement, certification, or affiliation. The artwork is original ChatGPT-generated
 abstract circuit imagery and contains no TypeSafe or Jev logo or wordmark.
 
-- **Display name:** TypeSafe AI Implementation
-- **Short description (26/30):** Plan TypeSafe integrations
+- **Display name:** Semantic Decision Integration
+- **Short description (26/30):** Plan semantic integrations
 - **Developer name:** ngallodev-software
 - **Category:** Developer Tools
 - **Capabilities:**

@@ -5,7 +5,7 @@ Append new entries rather than rewriting older decisions. For each update, recor
 reason, the user-visible behavior or contract that changed, the authoritative docs checked,
 and the validation performed. Keep full implementation detail in the skill and references.
 
-## 2026-09-24 — Public listing clarity and reproducible review cases
+## 2026-09-24 — TypeSafe AI Implementation listing and reproducible review cases
 
 - Renamed the public listing to **TypeSafe AI Implementation**. The skill/package slug
   remains `typesafe-ai-implementation`; Jev remains in the technical guide as the name of
@@ -32,7 +32,28 @@ and the validation performed. Keep full implementation detail in the skill and r
 
 ### Validation
 
-- Pending final manifest, skill, and ZIP validation for 0.1.3.
+- Plugin and skill validators passed; manifest metadata and the 0.1.3 ZIP were checked.
+
+## 2026-09-24 — Distinct public listing name and artwork provenance
+
+- Changed the public listing and repository marketplace display name to **Semantic
+  Decision Integration**, avoiding a vendor name in the product title while retaining
+  TypeSafe AI and Jev references where technically relevant.
+- Documented that the two abstract circuit images were generated with ChatGPT and contain
+  no TypeSafe or Jev logo or wordmark. Added the provenance note to the plugin assets.
+- Corrected the earlier description of the composer image as a “supplied Jev icon”: it is
+  publisher-supplied generated artwork, not a TypeSafe/Jev asset. The old line is retained
+  above as historical context for the 0.1.2 release.
+- Bumped the plugin package to 0.1.4 and refreshed the directory ZIP.
+
+### Sources checked
+
+- [OpenAI Terms of Use — ownership of output](https://openai.com/policies/terms-of-use/)
+- [TypeSafe AI Terms of Use](https://typesafe.ai/legal/terms)
+
+### Validation
+
+- Pending final manifest, skill, and ZIP validation for 0.1.4.
 
 ## 2026-09-24 — ChatGPT and Codex plugin package
 
