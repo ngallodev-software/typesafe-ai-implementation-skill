@@ -1,6 +1,7 @@
 # Privacy policy draft — Jev AI Implementation
 
-**Publisher:** ngallodev-software  
+**Publisher:** ngallodev-software
+
 **Effective date:** Set this date when publishing the policy.
 
 Jev AI Implementation is a skills-only plugin. It contains instructions, documentation,
