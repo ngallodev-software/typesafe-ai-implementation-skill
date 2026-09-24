@@ -12,7 +12,7 @@
 
 **Portfolio context:** [Agent-Workflow TypeSafe AI case study](https://ngallodev-software.uk/projects/agent-workflow-typesafe-ai)
 
-## Quick summary
+## Summary
 
 - **What it is:** a practical engineering guide for deciding where TypeSafe AI/Jev typed judgments belong in a real system.
 - **Core rule:** use semantic models only at bounded judgment seams; keep validation, permissions, persistence, side effects, workflow state, and final policy in deterministic application code.
