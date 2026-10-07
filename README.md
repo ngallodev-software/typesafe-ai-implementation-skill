@@ -1,10 +1,26 @@
-# TypeSafe AI Implementation Skill
+<p align="center">
+  <a href="https://ngallodev-software.uk/" title="Nate G. / ngallodev-software portfolio">
+    <img src="https://raw.githubusercontent.com/ngallodev-software/portfolio-site/master/public/icon-husky-r1-192.png" width="88" alt="Nate G. portfolio husky mark">
+  </a>
+</p>
 
-> A practical engineering playbook for using Jev / System One typed judgments at
-> bounded semantic decision points while keeping application authority in code.
+<h1 align="center">TypeSafe AI Implementation Skill</h1>
 
-![Skill](https://img.shields.io/badge/skill-0.1.1-blue)
-![License](https://img.shields.io/badge/license-Apache--2.0-green)
+<p align="center"><strong>A practical engineering playbook for using Jev/System One at bounded semantic decision seams while keeping application authority in code.</strong></p>
+
+<p align="center">
+  <a href="https://ngallodev-software.uk/">Portfolio</a> ·
+  <a href="https://ngallodev-software.uk/projects/agent-workflow-typesafe-ai">TypeSafe/Jev case study</a> ·
+  <a href="https://jevhunt.com/projects/ngallodev-software/typesafe-ai-implementation-skill/">JevHunt listing</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/plugin-0.1.4-blue" alt="">
+  <img src="https://img.shields.io/badge/skill-implementation%20guide-6f42c1" alt="">
+  <img src="https://img.shields.io/badge/license-Apache--2.0-green" alt="">
+</p>
+
+> **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. A private `agent-workflow-lab-notebook` preserves dated decisions, failures, corrections, and evidence lineage; public README and portfolio claims are curated from public artifacts and reviewed notebook history. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
 
 **Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
