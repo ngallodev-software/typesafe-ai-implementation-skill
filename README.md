@@ -20,9 +20,67 @@
   <img src="https://img.shields.io/badge/license-Apache--2.0-green" alt="">
 </p>
 
-## Summary
-
 > **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. A private `agent-workflow-lab-notebook` preserves dated decisions, failures, corrections, and evidence lineage; public README and portfolio claims are curated from public artifacts and reviewed notebook history. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
+
+**Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
+[Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
+
+This Codex companion helps integrate TypeSafe AI's Jev model into applications; it does not replace the LLM
+that powers Codex. For current API and primitive instructions, use TypeSafe's
+[official agent skill](https://docs.typesafe.ai/agent-skill) and
+[coding-agent guide](https://docs.typesafe.ai/introduction/coding-agents).
+
+## ChatGPT and Codex plugin
+
+This repository includes **Semantic Decision Integration**, a skills-based plugin for
+ChatGPT and Codex in the desktop app. It packages this implementation playbook with
+original ChatGPT-generated abstract circuit artwork. It helps an agent build applications
+that use TypeSafe AI's Jev model; it does not replace the coding model or call the
+TypeSafe API itself. The plugin is independent and not an official TypeSafe AI product or
+endorsement. The product names are used only to describe compatibility; the artwork
+contains no vendor logo or wordmark.
+
+- Plugin package: [`plugins/typesafe-ai-implementation/`](plugins/typesafe-ai-implementation/)
+- Repo marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
+- Evolution record: [`EVOLUTION.md`](EVOLUTION.md)
+- [OpenAI plugin packaging guide](https://developers.openai.com/plugins/build/plugins) ·
+  [ChatGPT plugins documentation](https://learn.chatgpt.com/docs/plugins?surface=app)
+
+To use it from a local checkout, open this repository in the ChatGPT/Codex desktop app,
+then open **Plugins**, choose **Semantic Decision Integration**, install **Semantic Decision Integration**,
+and start a new chat or Codex task. The repo-scoped marketplace definition is at
+`.agents/plugins/marketplace.json`. This is repository marketplace distribution;
+appearing in the public Plugins Directory requires the separate OpenAI submission and
+review process.
+
+### Public Plugins Directory submission
+
+This local marketplace package is not a public listing. OpenAI accepts skills-only
+plugins, so this package does not need an MCP server. The public submission ZIP should
+contain the plugin root (including `plugin.json`, `.codex-plugin/plugin.json`, `skills/`,
+and `assets/`) without the repository marketplace. OpenAI's portal validates the upload,
+scans the skill, and collects the remaining listing and test materials.
+
+The current [skills-only ZIP](marketplace-submission/typesafe-ai-implementation-0.1.4.zip),
+[listing draft](marketplace-submission/listing-draft.md), [privacy policy draft](marketplace-submission/privacy-policy.md),
+[release notes](marketplace-submission/release-notes.md), and [test cases](marketplace-submission/test-cases.md)
+are prepared in `marketplace-submission/`. Rebuild the ZIP after package edits with
+`python marketplace-submission/build_zip.py`.
+
+Before submission, confirm a verified individual or business publisher identity and
+**Apps Management: Write** access in the publishing organization. Prepare up to three
+starter prompts, exactly five positive and three negative test cases, availability
+regions, and release notes. Website, support, privacy, and terms URLs are optional for a
+skills-only ZIP according to the submission error reference; OpenAI's privacy guidance
+still expects a published privacy policy, so include one if available. Do not submit
+URLs that are not live and accurate. OpenAI reviews the draft; approval is required
+before the publisher can publish it to the universal Plugins Directory.
+
+See OpenAI's [submission guide](https://developers.openai.com/plugins/deploy/submission),
+[plugin guidelines](https://developers.openai.com/plugins/app-guidelines), and
+[submission error reference](https://developers.openai.com/plugins/deploy/submission-errors).
+
+## Summary
 
 - **What it is:** a practical engineering guide for deciding where TypeSafe AI/Jev typed judgments belong in a real system.
 - **Core rule:** use semantic models only at bounded judgment seams; keep validation, permissions, persistence, side effects, workflow state, and final policy in deterministic application code.
