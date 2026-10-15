@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/license-Apache--2.0-green" alt="">
 </p>
 
-> **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. A private `agent-workflow-lab-notebook` preserves dated decisions, failures, corrections, and evidence lineage; public README and portfolio claims are curated from public artifacts and reviewed notebook history. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
+> **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. Public README and portfolio claims are curated from public artifacts and reviewed against a private lab notebook of dated decisions and corrections. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
 
 **Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
@@ -42,7 +42,7 @@ contains no vendor logo or wordmark.
 
 - Plugin package: [`plugins/typesafe-ai-implementation/`](plugins/typesafe-ai-implementation/)
 - Repo marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
-- Evolution record: [`EVOLUTION.md`](EVOLUTION.md)
+- Evolution record: [`EVOLUTION.md`](docs/internal/EVOLUTION.md)
 - [OpenAI plugin packaging guide](https://developers.openai.com/plugins/build/plugins) ·
   [ChatGPT plugins documentation](https://learn.chatgpt.com/docs/plugins?surface=app)
 
