@@ -42,7 +42,7 @@ contains no vendor logo or wordmark.
 
 - Plugin package: [`plugins/typesafe-ai-implementation/`](plugins/typesafe-ai-implementation/)
 - Repo marketplace: [`.agents/plugins/marketplace.json`](.agents/plugins/marketplace.json)
-- Evolution record: [`EVOLUTION.md`](EVOLUTION.md)
+- Evolution record: [`EVOLUTION.md`](docs/internal/EVOLUTION.md)
 - [OpenAI plugin packaging guide](https://developers.openai.com/plugins/build/plugins) ·
   [ChatGPT plugins documentation](https://learn.chatgpt.com/docs/plugins?surface=app)
 
