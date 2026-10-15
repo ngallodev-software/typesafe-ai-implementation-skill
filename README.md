@@ -20,7 +20,7 @@
   <img src="https://img.shields.io/badge/license-Apache--2.0-green" alt="">
 </p>
 
-> **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. A private `agent-workflow-lab-notebook` preserves dated decisions, failures, corrections, and evidence lineage; public README and portfolio claims are curated from public artifacts and reviewed notebook history. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
+> **Evidence & chronology:** this repository is part of the wider Agent-Workflow engineering ecosystem. Public README and portfolio claims are curated from public artifacts and reviewed against a private lab notebook of dated decisions and corrections. JevHunt is an independent discovery/indexing surface, not an endorsement or independent validation.
 
 **Start here:** [`SKILL.md`](skills/typesafe-ai-implementation/SKILL.md) · [Design references](skills/typesafe-ai-implementation/references/) ·
 [Provenance](PROVENANCE.md) · [Official TypeSafe documentation](https://docs.typesafe.ai/llms.txt)
